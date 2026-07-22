@@ -1,0 +1,11 @@
+{
+  "itemGroup.ironmanarmormod": "Iron Man Armory",
+
+  "ironmanarmormod.configuration.title": "Example Mod Configs",
+  "ironmanarmormod.configuration.section.ironmanarmormod.common.toml": "Example Mod Configs",
+  "ironmanarmormod.configuration.section.ironmanarmormod.common.toml.title": "Example Mod Configs",
+  "ironmanarmormod.configuration.items": "Item List",
+  "ironmanarmormod.configuration.logDirtBlock": "Log Dirt Block",
+  "ironmanarmormod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "ironmanarmormod.configuration.magicNumber": "Magic Number"
+}
