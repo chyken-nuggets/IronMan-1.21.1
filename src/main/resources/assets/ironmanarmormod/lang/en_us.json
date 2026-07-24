@@ -11,6 +11,9 @@
   "item.ironmanarmormod.raw_titanium": "Raw Titanium",
   "item.ironmanarmormod.titanium_ingot": "Titanium Ingot",
 
+  "item.ironmanarmormod.palladium": "Palladium",
+  "item.ironmanarmormod.palladium_arc_reactor": "Palladium Core Arc Reactor",
+
   "ironmanarmormod.configuration.title": "Example Mod Configs",
   "ironmanarmormod.configuration.section.ironmanarmormod.common.toml": "Example Mod Configs",
   "ironmanarmormod.configuration.section.ironmanarmormod.common.toml.title": "Example Mod Configs",

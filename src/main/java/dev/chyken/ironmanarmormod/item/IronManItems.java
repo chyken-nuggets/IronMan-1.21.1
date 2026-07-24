@@ -15,4 +15,7 @@ public class IronManItems {
 
     public static final DeferredItem<Item> RAW_TITANIUM = ITEMS.register("raw_titanium", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> PALLADIUM = ITEMS.register("palladium", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PALLADIUM_ARC_REACTOR = ITEMS.register("palladium_arc_reactor", () -> new Item(new Item.Properties()));
 }
