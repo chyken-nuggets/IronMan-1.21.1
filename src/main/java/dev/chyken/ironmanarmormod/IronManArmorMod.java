@@ -2,6 +2,7 @@ package dev.chyken.ironmanarmormod;
 
 import dev.chyken.ironmanarmormod.block.IronManBlocks;
 import dev.chyken.ironmanarmormod.data.IronManDataGenerator;
+import dev.chyken.ironmanarmormod.event.IronManAnvilRecipeHandler;
 import dev.chyken.ironmanarmormod.item.IronManItems;
 import net.minecraft.world.item.*;
 import org.slf4j.Logger;
@@ -46,6 +47,8 @@ public class IronManArmorMod {
         CREATIVE_MODE_TABS.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(new IronManAnvilRecipeHandler());
+
 
         modEventBus.addListener(IronManDataGenerator::gatherData);
 

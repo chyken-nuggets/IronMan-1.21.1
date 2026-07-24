@@ -1,6 +1,8 @@
 {
   "itemGroup.ironmanarmormod": "Iron Man Armory",
 
+  "item.ironmanarmormod.steel_sheet": "Steel Sheet",
+
   "block.ironmanarmormod.magnesium_ore": "Magnesium Ore",
   "item.ironmanarmormod.raw_magnesium": "Raw Magnesium",
   "item.ironmanarmormod.magnesium_ingot": "Magnesium Ingot",
