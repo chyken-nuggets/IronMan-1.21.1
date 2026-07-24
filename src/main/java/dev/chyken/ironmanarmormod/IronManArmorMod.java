@@ -1,5 +1,8 @@
 package dev.chyken.ironmanarmormod;
 
+import dev.chyken.ironmanarmormod.block.IronManBlocks;
+import dev.chyken.ironmanarmormod.data.IronManDataGenerator;
+import dev.chyken.ironmanarmormod.item.IronManItems;
 import net.minecraft.world.item.*;
 import org.slf4j.Logger;
 
@@ -8,11 +11,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -20,14 +19,10 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(IronManArmorMod.MODID)
 public class IronManArmorMod {
     public static final String MODID = "ironmanarmormod";
@@ -40,12 +35,14 @@ public class IronManArmorMod {
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(Items.IRON_CHESTPLATE::getDefaultInstance)
             .displayItems((parameters, output) -> {
-                output.accept(Items.ARMOR_STAND);
+                IronManItems.ITEMS.getEntries().forEach(item -> output.accept(item.get()));
             }).build());
 
     public IronManArmorMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
+        IronManBlocks.BLOCKS.register(modEventBus);
+        IronManItems.ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
