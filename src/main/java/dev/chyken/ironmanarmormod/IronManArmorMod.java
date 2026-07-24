@@ -47,6 +47,8 @@ public class IronManArmorMod {
 
         NeoForge.EVENT_BUS.register(this);
 
+        modEventBus.addListener(IronManDataGenerator::gatherData);
+
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
