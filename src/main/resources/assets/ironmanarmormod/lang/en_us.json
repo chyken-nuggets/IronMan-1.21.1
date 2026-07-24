@@ -1,6 +1,14 @@
 {
   "itemGroup.ironmanarmormod": "Iron Man Armory",
 
+  "block.ironmanarmormod.magnesium_ore": "Magnesium Ore",
+  "item.ironmanarmormod.raw_magnesium": "Raw Magnesium",
+  "item.ironmanarmormod.magnesium_ingot": "Magnesium Ingot",
+
+  "block.ironmanarmormod.titanium_ore": "Titanium Ore",
+  "item.ironmanarmormod.raw_titanium": "Raw Titanium",
+  "item.ironmanarmormod.titanium_ingot": "Titanium Ingot",
+
   "ironmanarmormod.configuration.title": "Example Mod Configs",
   "ironmanarmormod.configuration.section.ironmanarmormod.common.toml": "Example Mod Configs",
   "ironmanarmormod.configuration.section.ironmanarmormod.common.toml.title": "Example Mod Configs",

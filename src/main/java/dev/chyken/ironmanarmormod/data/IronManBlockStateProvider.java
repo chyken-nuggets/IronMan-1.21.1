@@ -1,6 +1,7 @@
 package dev.chyken.ironmanarmormod.data;
 
 import dev.chyken.ironmanarmormod.IronManArmorMod;
+import dev.chyken.ironmanarmormod.block.IronManBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
@@ -13,6 +14,8 @@ public class IronManBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(IronManBlocks.MAGNESIUM_ORE.get());
+        blockWithItem(IronManBlocks.TITANIUM_ORE.get());
     }
 
     private void blockWithItem(Block block) {
